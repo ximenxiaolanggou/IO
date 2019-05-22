@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bio" />
-        <module name="nio" />
+        <module name="netty (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bio" target="1.7" />
+      <module name="netty" target="1.5" />
+      <module name="netty (1)" target="1.5" />
       <module name="nio" target="1.5" />
     </bytecodeTargetLevel>
   </component>

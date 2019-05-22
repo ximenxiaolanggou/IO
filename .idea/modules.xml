@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bio/bio.iml" filepath="$PROJECT_DIR$/bio/bio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bio/bio.iml" filepath="$PROJECT_DIR$/bio/bio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty (1).iml" filepath="$PROJECT_DIR$/netty/netty (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/nio/nio.iml" filepath="$PROJECT_DIR$/nio/nio.iml" />
     </modules>
   </component>

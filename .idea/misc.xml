@@ -8,7 +8,13 @@
       <list>
         <option value="$PROJECT_DIR$/bio/pom.xml" />
         <option value="$PROJECT_DIR$/nio/pom.xml" />
+        <option value="$PROJECT_DIR$/netty/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/nio/netty/pom.xml" />
+      </set>
     </option>
   </component>
 </project>
