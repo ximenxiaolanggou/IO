@@ -4,10 +4,7 @@ import com.damoncai.socket.NIOServer;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
@@ -78,8 +75,9 @@ public class ChatServer {
     public void broadCast(SocketChannel exceptChannel,String msg) throws Exception{
         System.out.println("开始广播...");
         for(SelectionKey key : selector.keys()){
-            SocketChannel channel = (SocketChannel) key.channel();
-            if(channel instanceof SocketChannel && channel != exceptChannel){
+            SelectableChannel selectableChannel = key.channel();
+            if(selectableChannel instanceof SocketChannel && selectableChannel != exceptChannel){
+                SocketChannel channel = (SocketChannel)selectableChannel;
                 ByteBuffer buffer = ByteBuffer.wrap(msg.getBytes());
                 channel.write(buffer);
             }
