@@ -17,12 +17,14 @@ import io.netty.util.CharsetUtil;
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     //就绪事件
+    @Override
     public void channelActive(ChannelHandlerContext ctx){
         System.out.println("Client-ChannelHandlerContext:" + ctx);
         ctx.writeAndFlush(Unpooled.copiedBuffer("老板，还钱！", CharsetUtil.UTF_8));
     }
 
     //读取事件
+    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){
         ByteBuf buf = (ByteBuf)msg;
         System.out.println("服务器端发来消息：" + buf.toString(CharsetUtil.UTF_8));
